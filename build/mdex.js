@@ -363,6 +363,9 @@ module.exports = Toolbar = (function() {
   Toolbar.prototype.addButton = function(buttonName) {
     var el;
     el = this.createElement(buttonName);
+    if (el.className === '') {
+      el.className = 'button-' + buttonName;
+    }
     return this.el.appendChild(el);
   };
 
