@@ -28,6 +28,7 @@ module.exports = class Toolbar
 
   addButton: (buttonName) ->
     el = @createElement(buttonName)
+    el.className = 'button-' + buttonName if el.className == ''
     @el.appendChild(el)
 
   appendToCodemirror: ->
